@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: #292E49;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MenuClientesController">
+   <children>
+      <ImageView fitHeight="290.0" fitWidth="258.0" layoutX="953.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/LogoSuperKinal.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="100.0" layoutY="64.0" prefHeight="84.0" prefWidth="379.0" text="Menu Clientes" textFill="WHITE">
+         <font>
+            <Font size="57.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblClientes" layoutX="100.0" layoutY="164.0" prefHeight="500.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="colidCliente" minWidth="60.0" prefWidth="75.0" text="idcliente" />
+          <TableColumn fx:id="colNombre" minWidth="160.0" prefWidth="75.0" text="nombre" />
+            <TableColumn fx:id="colApellido" minWidth="160.0" prefWidth="75.0" text="apellido" />
+            <TableColumn fx:id="colTelefono" minWidth="160.0" prefWidth="75.0" text="telefono" />
+            <TableColumn fx:id="colDireccion" minWidth="260.0" prefWidth="75.0" text="direccion" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="953.0" layoutY="258.0" prefHeight="372.0" prefWidth="186.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="65.0" prefWidth="135.0" style="-fx-background-radius: 20;" text="Agregar">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="65.0" prefWidth="135.0" style="-fx-background-radius: 20;" text="Editar" GridPane.rowIndex="1">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="65.0" prefWidth="135.0" style="-fx-background-radius: 20;" text="Eliminar" GridPane.rowIndex="2">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="65.0" prefWidth="135.0" style="-fx-background-radius: 20;" text="Reportes" GridPane.rowIndex="3">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Button fx:id="btnRegresar" layoutX="100.0" layoutY="686.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="104.0" text="Regresar" />
+      <TextField fx:id="tfBuscarClienteId" layoutX="606.0" layoutY="110.0" prefHeight="33.0" prefWidth="217.0" promptText="Ingrese el id a buscar" />
+      <Button fx:id="btnBuscar" layoutX="829.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="14.0" prefWidth="27.0">
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/Lupa.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>
